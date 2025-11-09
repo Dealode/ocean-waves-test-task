@@ -73,3 +73,6 @@ src/ocean-waves-test-task/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 # Temporary auto-generated Android Assets
 src/ocean-waves-test-task/[Aa]ssets/[Ss]treamingAssets/aa.meta
 src/ocean-waves-test-task/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Paid materials
+src/ocean-waves-test-task/[Aa]ssets/[Cc]rest/
