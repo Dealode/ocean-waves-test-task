@@ -1,7 +1,9 @@
 {
     "name": "Code",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "Crest"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
