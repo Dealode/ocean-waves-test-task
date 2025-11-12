@@ -2,7 +2,9 @@
     "name": "Code",
     "rootNamespace": "",
     "references": [
-        "Crest"
+        "Crest",
+        "UniTask",
+        "VContainer"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
