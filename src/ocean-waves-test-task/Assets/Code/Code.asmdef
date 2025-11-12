@@ -4,7 +4,9 @@
     "references": [
         "Crest",
         "UniTask",
-        "VContainer"
+        "VContainer",
+        "Unity.Addressables",
+        "Unity.ResourceManager"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

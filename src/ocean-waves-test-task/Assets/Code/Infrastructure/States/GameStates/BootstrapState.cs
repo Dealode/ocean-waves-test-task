@@ -1,45 +1,31 @@
 using Code.Infrastructure.States.StateMachine;
 using Code.Infrastructure.States.StatesInfrastructure;
+using UnityEngine;
 
 namespace Code.Infrastructure.States.GameStates
 {
     internal class BootstrapState : IState
     {
         private readonly IGameStateMachine  _gameStateMachine;
-        public void Enter()
-        {
+
+        public BootstrapState(IGameStateMachine gameStateMachine) => 
+            _gameStateMachine = gameStateMachine;
+
+        public void Enter() => 
             _gameStateMachine.Enter<LoadLevelState>();
-        }
 
-        public void Exit()
-        {
-            throw new System.NotImplementedException();
-        }
+        public void Exit() { }
     }
 
-    internal class LoadLevelState : IState
-    {
-        public void Enter()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Exit()
-        {
-            throw new System.NotImplementedException();
-        }
-    }
-    
     internal class EnterLevelState : IState
     {
         public void Enter()
         {
-            throw new System.NotImplementedException();
+            Debug.Log("Entering level state");
         }
 
         public void Exit()
         {
-            throw new System.NotImplementedException();
         }
     }
 

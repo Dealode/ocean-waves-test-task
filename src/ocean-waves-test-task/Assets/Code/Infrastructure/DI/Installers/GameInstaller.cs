@@ -1,6 +1,8 @@
-﻿using Code.Infrastructure.States.Factory;
+﻿using Code.Infrastructure.Loading;
+using Code.Infrastructure.States.Factory;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
+using Code.Services.Coroutines;
 using VContainer;
 using VContainer.Unity;
 
@@ -22,15 +24,11 @@ namespace Code.Infrastructure.DI.Installers
             builder.RegisterBuildCallback(OnBuildComplete);
         }
 
-        private void BindInfrastructureServices(IContainerBuilder builder)
-        {
+        private void BindInfrastructureServices(IContainerBuilder builder) => 
             builder.RegisterInstance(_coroutineRunner);
-        }
 
-        private void BindCommonService(IContainerBuilder builder)
-        {
-            //builder.Register<ISceneLoader, SceneLoader>(Lifetime.Singleton);
-        }
+        private void BindCommonService(IContainerBuilder builder) => 
+            builder.Register<ISceneLoader, SceneLoader>(Lifetime.Singleton);
 
         private void BindStateMachine(IContainerBuilder builder)
         {
